@@ -8,6 +8,8 @@ def is_valid(email):
     for i in range(0, len(email)):
         if email[i] == '@' or email[i] == '.':
             pass
+        elif ord('0') <= ord(email[i]) <= ord('9'):
+            pass
         elif not ord('a') <= ord(email[i]) <= ord('z'):
             return False
     at = email.find('@')
