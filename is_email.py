@@ -5,12 +5,12 @@
 #email = 'hello a@b this@example.where this@.is.fun'
 
 def is_valid(email):
-    for i in range(0, len(email)):
-        if email[i] == '@' or email[i] == '.':
+    for c in email:
+        if c == '@' or c == '.':
             pass
-        elif ord('0') <= ord(email[i]) <= ord('9'):
+        elif ord('0') <= ord(c) <= ord('9'):
             pass
-        elif not ord('a') <= ord(email[i]) <= ord('z'):
+        elif not ord('a') <= ord(c) <= ord('z'):
             return False
     at = email.find('@')
     dot = email.find('.')
